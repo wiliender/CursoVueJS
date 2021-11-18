@@ -5,8 +5,8 @@ npm i
 
 npm i browser-sync
 
-npm run exercicios
-npm run qrcode
-npm run sales
+npm run exercicios<br>
+npm run qrcode<br>
+npm run sales<br>
 
 exercicios": "http-server ./exercicios -c-1", qrcode": "http-server ./qrcode -c-1", sales": "http-server ./sales -c-1"

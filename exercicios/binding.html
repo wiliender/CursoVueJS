@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Binding</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <p>{{ link }}</p>
+        <p><a href="{{ link }}">Wiliender</a></p>
+        <p><a v-bind:href="link">Wiliender</a></p>
+        <p><a :href="link">Wiliender</a></p>
+        <p>
+            <input type="text" v-model="nome"><br> 
+            <span>{{ nome }} </span>
+        </p>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                nome: "Wiliender",
+                link: "https://github.com/wiliender"
+            },
+            watch: { // observador de mudanças
+                nome(novoValor) { //novoValor é o novo valor da propriedade nome
+                    console.log(novoValor.toUpperCase()); //novoValor.toUpperCase() é o novo valor da propriedade nome em caixa alta
+                }
+            }
+        })
+    </script>
+</body>
+</html>
